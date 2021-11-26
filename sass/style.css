@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #050a0f;
+  /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.overlay .overlay-content {
+  position: relative;
+  top: 25%;
+  /* 25% from the top */
+  width: 100%;
+  /* 100% width */
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  /* Display block instead of inline */
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  /* Transition effects on hover (color) */
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay .overlay a {
+    font-size: 20px;
+  }
+  .overlay .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.navbar {
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  font-weight: 400;
+}
+
+.navbar .navbar-brand {
+  font-family: "Kaushan Script", cursive;
+  font-size: 2rem;
+  color: #28323e;
+}
+
+.navbar .navbar-toggler {
+  font-size: 2rem;
+  color: #28323e;
+}
+
+.navbar .navbar-toggler:focus,
+.navbar .navbar-toggler:active,
+.navbar .navbar-toggler-icon:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.navbar .navbar-nav .nav-item > a {
+  color: #28323e;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.navbar .navbar-nav .nav-item > a {
+  color: #28323e;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.navbar .navbar-nav .navbar-nav li a:hover {
+  color: #0077b6;
+}
+
+.navbar .navbar-nav .active {
+  color: #0077b6 !important;
+}
+
+.navbar .socials .ti {
+  padding: 10px;
+  font-size: 1rem;
+  width: 3rem;
+  text-align: center;
+  text-decoration: none;
+  margin: 0.8rem 5px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.navbar .socials a {
+  color: #0077b6;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 1rem 0.5rem;
+  }
+  .navbar .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
+.albums {
+  margin: 2rem auto;
+}
+
+.albums .row {
+  margin-bottom: 2rem;
+}
+
+.albums .row a > img {
+  width: 100%;
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: black;
+  /* Black fallback color */
+  background-color: black;
+  /* Black w/opacity */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  /* Position the content inside the overlay */
+  /* When you mouse over the navigation links, change their color */
+  /* Position the close button (top right corner) */
+}
+
+.overlay .overlay-content {
+  position: relative;
+  top: 25%;
+  /* 25% from the top */
+  width: 100%;
+  /* 100% width */
+  text-align: center;
+  /* Centered text/links */
+  margin-top: 30px;
+  /* 30px top margin to avoid conflict with the close button on smaller screens */
+  /* The navigation links inside the overlay */
+}
+
+.overlay .overlay-content a {
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: block;
+  /* Display block instead of inline */
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  /* Transition effects on hover (color) */
+}
+
+.overlay a:hover,
+.overlay a:focus,
+.overlay a:active {
+  color: #0077b6;
+}
+
+.overlay .closebtn i {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 3rem;
+  cursor: pointer;
+  color: white;
+}
+
+.bg i {
+  color: white;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 1;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .closebtn i {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media (max-width: 800px) {
+  /* Position the close button (top right corner) */
+  .overlay .closebtn i {
+    position: absolute;
+    top: 18px;
+    left: -20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+.bg i {
+  color: white;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 1;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.bg {
+  background-image: url("../images/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.contact {
+  z-index: 1;
+  padding: auto 0;
+}
+
+.contact section {
+  background-image: url("../images/large-triangles.svg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.contact section h3 {
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contact section h4 {
+  color: #ffffff;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact form .btn-submit {
+  background-color: #0077b6;
+  color: #ffffff;
+  border: 2px solid #0077b6;
+  padding: 15px 32px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.contact form .btn-submit:active,
+.contact form .btn-submit:hover,
+.contact form .btn-submit:focus {
+  background-color: #0b5b86;
+  border: 2px solid #0b5b86;
+}
+
+.about h1 {
+  font-size: 5rem;
+  color: #28323e;
+  font-weight: 700;
+  text-align: center;
+  margin: 2rem auto;
+  text-transform: capitalize;
+}
+
+.about .left {
+  margin-top: 2rem;
+}
+
+.about .left p {
+  color: #28323e;
+  font-weight: 500;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.active {
+  color: #0077b6;
+}
+/*# sourceMappingURL=style.css.map */

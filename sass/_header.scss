@@ -1,0 +1,111 @@
+// curtain navbar
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: $c1; /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s;
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+  a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+  a:hover,
+  a:focus {
+    color: #f1f1f1;
+  }
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+}
+// vertical navbar
+.navbar {
+  background-color: $c4;
+  padding: 2rem 1rem;
+  font-weight: $f4;
+  .navbar-brand {
+    font-family: $logoFont;
+    font-size: 2rem;
+    color: $c2;
+  }
+  .navbar-toggler {
+    font-size: 2rem;
+    color: $c2;
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .navbar-nav {
+    .nav-item > a {
+      color: $c2;
+      font-weight: $f5;
+      font-size: 1.2rem;
+    }
+    .nav-item > a {
+      color: $c2;
+      font-weight: $f5;
+      font-size: 1.2rem;
+    }
+    .navbar-nav li a:hover {
+      color: $c5;
+    }
+    .active {
+      color: $c5 !important;
+    }
+  }
+  .socials {
+    .ti {
+      padding: 10px;
+      font-size: 1rem;
+      width: 3rem;
+      text-align: center;
+      text-decoration: none;
+      margin: 0.8rem 5px;
+      border-radius: 50%;
+      background-color: white;
+    }
+    a {
+      color: $c5;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 1rem 0.5rem;
+    .navbar-brand {
+      font-size: 1rem;
+    }
+  }
+}

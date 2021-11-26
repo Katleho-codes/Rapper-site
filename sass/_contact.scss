@@ -1,0 +1,44 @@
+.contact {
+  z-index: 1;
+  padding: auto 0;
+  section {
+    background-image: url("../images/large-triangles.svg");
+    background-size: cover;
+    background-position: center center;
+    h3 {
+      color: $c4;
+      font-weight: $f7;
+      text-align: center;
+    }
+    h4 {
+      color: $c4;
+      font-weight: $f5;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+  form {
+    .btn-submit {
+      background-color: $c5;
+      color: $c4;
+      border: 2px solid $c5;
+      padding: 15px 32px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1.2rem;
+      font-weight: $f5;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .btn-submit:active,
+    .btn-submit:hover,
+    .btn-submit:focus {
+      background-color: $c6;
+      border: 2px solid $c6;
+    }
+  }
+}

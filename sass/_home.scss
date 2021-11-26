@@ -1,0 +1,101 @@
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgb(0, 0, 0); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  /* Position the content inside the overlay */
+  .overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    /* The navigation links inside the overlay */
+    a {
+      padding: 1rem;
+      text-decoration: none;
+      font-size: 2rem;
+      color: $c4;
+      font-weight: $f6;
+      text-transform: uppercase;
+      display: block; /* Display block instead of inline */
+      transition: 0.3s; /* Transition effects on hover (color) */
+    }
+  }
+  /* When you mouse over the navigation links, change their color */
+  a:hover,
+  a:focus,
+  a:active {
+    color: $c5;
+  }
+  /* Position the close button (top right corner) */
+  .closebtn i {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: white;
+  }
+}
+// Open curtain menu toggle button
+.bg i {
+  color: white;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 1;
+  cursor: pointer;
+  font-size: 3rem;
+}
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .closebtn i {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+@media (max-width: 800px) {
+  /* Position the close button (top right corner) */
+  .overlay {
+    .closebtn i {
+      position: absolute;
+      top: 18px;
+      left: -20px;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+  }
+}
+// Open curtain menu toggle button
+.bg i {
+  color: white;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: 1;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+// background
+.bg {
+  background-image: url("../images/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}

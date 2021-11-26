@@ -1,0 +1,17 @@
+.about {
+  h1 {
+    font-size: 5rem;
+    color: $c2;
+    font-weight: $f7;
+    text-align: center;
+    margin: 2rem auto;
+    text-transform: capitalize;
+  }
+  .left {
+    margin-top: 2rem;
+    p {
+      color: $c2;
+      font-weight: $f5;
+    }
+  }
+}

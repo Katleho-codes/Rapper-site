@@ -1,0 +1,25 @@
+@import "variables";
+@import "header";
+@import "body";
+@import "home";
+@import "contact";
+@import "about";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+}
+// .container {
+//   @include myContainer;
+// }
+.active {
+  color: $c5;
+}
